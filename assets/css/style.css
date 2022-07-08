@@ -8,13 +8,87 @@
    v2.0 | 20110126
    License: none (public domain)
    ========================================================================== */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
-blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
-ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
-figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -24,23 +98,38 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
 /* Force scrollbar */
-html { overflow-y: scroll; }
+html {
+  overflow-y: scroll;
+}
 
 /* Align radios and text inputs with their label */
 
-input[type='radio'] { vertical-align: text-bottom; }
+input[type='radio'] {
+  vertical-align: text-bottom;
+}
 
 /* Hand cursor on clickable input elements */
 label,
 input[type='button'],
 input[type='submit'],
-button { cursor: pointer; }
+button {
+  cursor: pointer;
+}
 
 strong {
   font-weight: bold;
@@ -48,7 +137,9 @@ strong {
   font-size: inherit;
 }
 
-em { font-style: italic; }
+em {
+  font-style: italic;
+}
 
 img {
   width: 100%;
@@ -64,8 +155,13 @@ sup {
   line-height: 0;
 }
 
-sup { top: -.7em; }
-sub { bottom: -.25em; }
+sup {
+  top: -.7em;
+}
+
+sub {
+  bottom: -.25em;
+}
 
 /* 1.2. Clear Fix
    ========================== */
@@ -76,90 +172,122 @@ sub { bottom: -.25em; }
   content: " ";
 }
 
-.cf:after { clear: both; }
-.cf { *zoom: 1; }
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
 
 /*for all*/
 body {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: sans-serif;
 }
 
-a { 
+a {
   display: inline-block;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 li {
   display: inline-block;
   list-style-type: none;
 }
-/* Common styling */
-.grey { color: #666; }
-.cap { text-transform: capitalize; }
-.up { text-transform: uppercase; }
-.center { text-align: center; }
-.bold { font-weight: bold; }
-.transition { transition: 1s all ease; }
 
 /*for wrapper*/
 .wrapper {
-  max-width: 1350px;
-  width: 86%; 
+  max-width: 1360px;
+  width: 86%;
   margin: 0 auto;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #EFEDD5;
-  overflow: hidden;
-}
+/*=================================
+  Header styling starts here
+=================================*/
+/*=================================
+  Header styling ends here
+=================================*/
+
 /*=================================
   main styling starts here
 =================================*/
-
-h2 {
-  padding-top: 10px;
-  font-size: 30px;
-  font-weight: 700;
-  text-align: center;
+main {
+  background-color: #EFEDD6;
 }
 
-.box-container {
-  padding-top: 10px;
+.scroll-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #EFEDD6;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
-  align-items: center;
+  overflow: hidden;
 }
 
-.box {
-  margin: 10px;
-  width: 400px;
-  height: 200px;
-  border-radius: 15px;
+.scroll-container h2 {
+  margin: 15px 0;
+  font-size: 31px;
+  font-weight: bold;
+}
+
+.scroll-container h2::first-letter {
+  text-transform: capitalize;
+}
+
+.card-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  color: #FFF;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.card {
+  padding: 75px 85%;
+  margin: 10px 0;
   background-color: #4682B4;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  font-size: 45px;
-  font-weight: 700;
-  transform: translateX(-500%);
+  -webkit-box-shadow: 2px 4px 5px rgb(0 0 0 / 30%);
+  box-shadow: 2px 4px 5px rgb(0 0 0 / 30%);
+  border-radius: 10px;
+  color: #FFF;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: capitalize;
+  -webkit-transform: translateX(400%);
+  -ms-transform: translateX(400%);
+  transform: translateX(400%);
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  -o-transition: transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
 }
 
-.box:nth-of-type(odd) {
-  transform: translateX(500%);
-  transition: .5s ease;
+.card:nth-of-type(even) {
+  -webkit-transform: translateX(-400%);
+  -ms-transform: translateX(-400%);
+  transform: translateX(-400%);
 }
 
-.box.show {
-  transform: translateX(0);
+.card.active {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
 }
-
-
 
 /*=================================
   main styling ends here
@@ -167,22 +295,11 @@ h2 {
 
 /*=================================
   footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
+=================================*/
+/*=================================
   footer styling ends here
-=================================*/ 
+=================================*/
 
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
+@media only screen and (max-width: 995px) {}
