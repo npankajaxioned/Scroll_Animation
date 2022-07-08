@@ -1,17 +1,25 @@
-var boxes = document.querySelectorAll('.box')
+function show() {
+  var cards = document.querySelectorAll(".card");
 
-var viewport_height = window.innerHeight 
-window.addEventListener('scroll',showBoxes)
+  for (var i = 0; i < cards.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = cards[i].getBoundingClientRect().top;
+      var elementVisible = 150;
 
-function showBoxes() {
-  
-  boxes.forEach(function(box) {
-    var box_top = box.getBoundingClientRect().top;
-    if(box_top < viewport_height) {
-      box.classList.add('show')
-    }
-    else{
-      box.classList.remove('show')
-    }
-  })
+      if (elementTop < windowHeight - elementVisible) {
+          cards[i].classList.add("active");
+      } else {
+          cards[i].classList.remove("active");
+      }
+  }
 }
+
+window.addEventListener("scroll", show);
+
+
+
+
+
+
+
+
